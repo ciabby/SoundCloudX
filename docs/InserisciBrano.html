@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Inserisci Brano</title>
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+
+<h2>Inserisci Brano</h2>
+
+<form action="inserisciBrano.php" method="POST">
+    
+    <label>Titolo:</label>
+    <input type="text" name="titolo_brano" required>
+
+    <br><br>
+     
+    <label>Ascolti:</label>
+    <input type="int" name="Ascolti" required>
+
+    <br><br>
+
+    <label>durata:</label>
+    <input type="int" name="durata_sec" required>
+
+    <br><br>
+
+
+    <button type="submit">Salva Brano</button>
+
+</form>
+
+</body>
+</html>

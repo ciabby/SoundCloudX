@@ -1,0 +1,54 @@
+body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+            background: linear-gradient(
+            -45deg,
+            #7400b8,
+            #6930c3,
+            #5e60ce,
+            #56cfe1,
+            #80ffdb
+            );
+            background-size: 400% 400%;
+            animation: gradientMove 8.5s ease-in-out infinite;
+            min-height: 100vh;
+
+        }
+        @keyframes gradientMove {
+        0%{
+            background-position: 0% 50%;
+        }
+
+        50%{
+            background-position: 100% 50%;
+        }
+
+        100%{
+            background-position: 0% 50%;
+        }
+    }
+        .btn {
+            display: inline-block;
+            padding: 15px 25px;
+            margin: 10px;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .btn:hover {
+            background-color: #34495e;
+            box-shadow: 5px 5px 6px,
+                        5px 5px 6px,
+                        5px 5px 6px,
+                        5px 5px 6px rgb(139, 174, 219);
+        }
+#form-bottoni
+{
+    background: rgba(255, 255, 255, 0.315);
+    border: 1 outset black;
+}
+        
+
