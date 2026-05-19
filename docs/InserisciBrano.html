@@ -26,9 +26,9 @@
     <input class="input-box" type="number" name="durata_sec" placeholder="inserisci la durata in secondi" required>
 
     <br><br>
-    <select class="box-mini">
-        <option value="album">Album</option>
-        <option value="artista">Artista</option>
+    <label>Artista:</label>
+    <select class="box-mini" name="artista">
+        <?php echo $options; ?>
     </select>
 
 
