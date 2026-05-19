@@ -7,28 +7,30 @@
    
 
 </head>
-<body class="simple-page">
-<div class="container">
+<body>
 
 <h2>Inserisci Album</h2>
 
 <form action="inserisciAlbum.php" method="POST">
     
     <label>Titolo:</label>
-    <input type="text" name="titolo" placeholder="inserisci il titolo dell'Album" required>
+    <input class="input-box" type="text" name="titolo" placeholder="inserisci il titolo dell'Album" required>
 
     <br><br>
      
     <label>AnnoUscita:</label>
-    <input type="number" name="Anno_uscita" placeholder="inserisci l'anno di uscita" required>
+    <input class="input-box" type="number" name="Anno_uscita" placeholder="inserisci l'anno di uscita" required>
 
     <br><br>
+    <select class="box-mini">
+        <option value="Brano">Brano</option>
+        <option value="artista">Artista</option>
+    </select>
 
     <button type="submit">Salva Album </button>
 
 </form>
 
-</div>
 
 </body>
 </html>

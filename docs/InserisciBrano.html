@@ -6,34 +6,33 @@
     <link rel="stylesheet" href="../assets/style/style.css">
 
 </head>
-<body class="simple-page">
-<div class="container">
+<body>
 
 <h2>Inserisci Brano</h2>
 
 <form action="inserisciBrano.php" method="POST">
     
     <label>Titolo:</label>
-    <input type="text" name="titolo_brano" placeholder="inserisci il titolo del Brano" required>
+    <input class="input-box" type="text" name="titolo_brano" placeholder="inserisci il titolo del Brano" required>
 
     <br><br>
      
     <label>Ascolti:</label>
-    <input type="number" name="Ascolti" placeholder="inserisci il numero di ascolti" required>
+    <input class="input-box" type="number" name="Ascolti" placeholder="inserisci il numero di ascolti" required>
 
     <br><br>
 
     <label>durata:</label>
-    <input type="number" name="durata_sec" placeholder="inserisci la durata in secondi" required>
+    <input class="input-box" type="number" name="durata_sec" placeholder="inserisci la durata in secondi" required>
 
     <br><br>
-    <select>
+    <select class="box-mini">
         <option value="album">Album</option>
         <option value="artista">Artista</option>
     </select>
 
 
-    <button type="submit">Salva Brano</button>
+    <button type="submit" class="btn">Salva Brano</button>
 
 </form>
 
