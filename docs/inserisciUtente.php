@@ -1,5 +1,5 @@
 <?php
-require "config/db.php";
+require "../config/db.php";
 
 $nome = $_POST["nome"];
 $mail = $_POST["email"];
@@ -10,6 +10,6 @@ $sql = "INSERT INTO utenti (nome, mail)
 $conn->query($sql);
 
 //Dopo aver inserito l'utente potrei fare diverse cose
-//scelgo di reindirizzare alla stessa pagina di inserimento html.
-header("Location: inserisciUtente.html");
+//scelgo di reindirizzare al menu con tutte le altre pagine.
+header("Location: menu.html");
 ?>

@@ -1,5 +1,5 @@
 <?php
-require "config/db.php";
+require "../config/db.php";
 $titolo = $_POST["titolo"];
 $Anno_uscita = $_POST["Anno_uscita"];
 

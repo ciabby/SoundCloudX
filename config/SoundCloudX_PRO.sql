@@ -66,7 +66,7 @@ SELECT * FROM Artisti WHERE nazione = 'Italia' AND stato = 'Attivo';
 SELECT * FROM Brani WHERE durata_sec < 120 OR ascolti = 0;
 SELECT * FROM Artisti ORDER BY LENGTH(nome_arte) DESC LIMIT 3;
 
-- ==========================================================
+-- ==========================================================
 -- FASE 5: ANALISI AVANZATA (LE 10 QUERY RICHIESTE)
 -- ==========================================================
 

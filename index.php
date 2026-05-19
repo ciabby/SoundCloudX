@@ -15,9 +15,7 @@ require "config/db.php";
 
     <h1> Sound-cloudX</h1>
 
-    <a class="btn" href="file/inserisciUtente.html">➕ Inserisci Utente </a>
-    <a class="btn" href="file/inserisciBrano.html">➕ Inserisci Utente Brano</a>
-    <a class="btn" href="file/AccessoBrani.html">➕ Inserisci Brani</a>
+    <a class="btn" href="docs/inserisciUtente.html">➕ Inserisci Utente</a>
 
     </body>
 </html>
