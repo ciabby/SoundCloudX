@@ -8,6 +8,27 @@
 </head>
 <body>
 
+<div class="login-top-right">
+    <button id="open-login" class="login-btn">Login</button>
+</div>
+
+<div id="login-modal" class="login-modal hidden">
+    <div class="login-modal-content">
+        <button type="button" id="close-login" class="close-modal">&times;</button>
+        <h2>Accesso</h2>
+        <form action="#" method="POST" class="login-form">
+            <label>Email:</label>
+            <input class="input-box" type="email" name="login_email" placeholder="inserisci la tua email" required>
+
+            <br><br>
+            <label>Password:</label>
+            <input class="input-box" type="password" name="login_password" placeholder="inserisci la tua password" required>
+
+            <button type="submit" class="btn login-submit">Login</button>
+        </form>
+    </div>
+</div>
+
 <h2>Inserisci utente</h2>
 
 <form action="inserisciUtente.php" method="POST">
@@ -25,11 +46,26 @@
     <label>Password:</label>
     <input class="input-box" type="password" name="password" placeholder="inserisci la password" required>
 
+    <button type="submit" class="btn">Registrati</button>
 
-    <button type="submit" class="btn">Salva utente</button>
 
 </form>
 
+<script>
+const openLogin = document.getElementById('open-login');
+const closeLogin = document.getElementById('close-login');
+const loginModal = document.getElementById('login-modal');
+
+if (openLogin && closeLogin && loginModal) {
+    openLogin.addEventListener('click', () => loginModal.classList.remove('hidden'));
+    closeLogin.addEventListener('click', () => loginModal.classList.add('hidden'));
+    loginModal.addEventListener('click', (event) => {
+        if (event.target === loginModal) {
+            loginModal.classList.add('hidden');
+        }
+    });
+}
+</script>
 
 </body>
 </html>

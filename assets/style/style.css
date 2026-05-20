@@ -80,3 +80,79 @@ button:hover {
     border: 2px solid antiquewhite;
     border-radius: 10px;
 }
+
+.login-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.login-btn {
+    padding: 12px 22px;
+    background: rgba(255,255,255,0.30);
+    color: #ffffff;
+    border: 1px solid rgba(255,255,255,0.40);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background: rgba(255,255,255,0.45);
+    transform: translateY(-1px);
+}
+
+.login-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-modal.hidden {
+    display: none;
+}
+
+.login-modal-content {
+    width: min(420px, 100%);
+    background: rgba(255,255,255,0.95);
+    color: #111;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    text-align: left;
+    position: relative;
+}
+
+.login-modal-content h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.close-modal {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.login-submit {
+    position: relative;
+    background: #6930c3;
+    color: #ffffff;
+    border-color: transparent;  
+    width: 95%;
+}
+
+.login-submit:hover {
+    background: #5e60ce;
+}
+
