@@ -4,6 +4,17 @@ body {
     margin-top: 50px;
     background-color: #56cfe1;
 }
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #6930c3;
+    text-align: left;   /* non più centrato */
+
+    position: absolute; /* la posiziona liberamente */
+    top: 20px;          /* distanza dal bordo superiore */
+    left: 20px;         /* distanza dal bordo sinistro */
+}
 
 /* BOTTONE ORIGINALE – SEMPLIFICATO MA IDENTICO ALLA VISTA */
 .btn,
