@@ -3,9 +3,10 @@ require "../config/db.php";
 
 $nome = $_POST["nome"];
 $mail = $_POST["email"];
+$password = $_POST["password"];
 
-$sql = "INSERT INTO utenti (nome, mail) 
-        VALUES ('$nome', '$mail')";
+$sql = "INSERT INTO utenti (nome, mail, password) 
+        VALUES ('$nome', '$mail', '$password'x)";
 
 $conn->query($sql);
 

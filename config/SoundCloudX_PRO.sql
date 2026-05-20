@@ -8,7 +8,12 @@ CREATE TABLE Artisti (
     nome_arte VARCHAR(100) NOT NULL UNIQUE,
     stato ENUM('Attivo', 'Inattivo', 'In Pausa') DEFAULT 'Attivo'
 );
-
+CREATE TABLE Utenti (
+    id_utente INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    mail VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
 CREATE TABLE Album (
     id_album INT PRIMARY KEY AUTO_INCREMENT,
     titolo VARCHAR(100) NOT NULL,
