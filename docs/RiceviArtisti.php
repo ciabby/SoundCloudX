@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 require "../config/db.php";
 
-$sql = "SELECT id_artista, nome_arte FROM artisti";
+$sql = "SELECT id_artista, nome_arte FROM Artisti";
 $result = $conn->query($sql);
 
 $artisti = [];

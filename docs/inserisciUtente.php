@@ -5,7 +5,7 @@ $nome = $_POST["nome"];
 $mail = $_POST["email"];
 $password = $_POST["password"];
 
-$sql = "INSERT INTO utenti (nome, mail, passwords) 
+$sql = "INSERT INTO Utenti (nome, mail, passwords) 
         VALUES ('$nome', '$mail', '$password')";
 $conn->query($sql);
 //scelgo di reindirizzare al menu con tutte le altre pagine.
