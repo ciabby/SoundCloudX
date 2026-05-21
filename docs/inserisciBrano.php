@@ -5,10 +5,21 @@ $titolo = $_POST["titolo_brano"];
 $artista = $_POST["Ascolti"];
 $durata = $_POST["durata_sec"];
 
-$sql = "INSERT INTO brani (titolo_brano, Ascolti, durata_sec) 
+$sql = "INSERT INTO Brani (titolo_brano, Ascolti, durata_sec) 
         VALUES ('$titolo', '$artista', '$durata')";
 
-$conn->query($sql);
+if ($conn->query($sql) === TRUE) {
+    // 2. Se l'inserimento ha successo, mostri l'alert e reindirizzi
+    echo "<script>
+    window.location.href = 'menu.html';
+    alert('Brano inserito con successo: " . addslashes($titolo) . "');
+    </script>";
+    exit(); // Blocca ulteriore codice PHP inutile
+} else {
+    // 3. Gestione di un eventuale errore nel database
+    echo "Errore durante l'inserimento del brano: " . $conn->error;
+}
+
 
 //Dopo aver inserito l'utente potrei fare diverse cose
 //scelgo di reindirizzare alla stessa pagina di inserimento html.

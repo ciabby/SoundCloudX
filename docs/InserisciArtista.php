@@ -4,7 +4,7 @@ require "../config/db.php";
 $nome_arte = $_POST["nome"];
 $stato = $_POST["stato"];
 
-$sql = "INSERT INTO artisti (nome_arte, stato) 
+$sql = "INSERT INTO Artisti (nome_arte, stato) 
         VALUES ('$nome_arte', '$stato')";
 // 2. Se l'inserimento ha successo, mostri l'alert e reindirizzi
 if ($conn->query($sql) === TRUE) {
