@@ -1,25 +1,11 @@
 /* --- BASE --- */
 body {
-    font-family: Arial, sans-serif;
+   font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
 
-    /* gradiente leggero, più arioso */
-    background: linear-gradient(
-        135deg,
-        #56cfe1 0%,
-        #72d2f5 35%,
-        #a98ff0 100%
-    );
-
-    background-attachment: fixed;
-    background-size: cover; 
-
-    min-height: 100vh;
-    color: white;
+    background-color: #b7e3ff; /* azzurro chiaro */
 }
-
-
 
 /* --- TITOLO --- */
 .title {
