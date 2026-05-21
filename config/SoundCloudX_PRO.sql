@@ -27,7 +27,7 @@ CREATE TABLE Brani (
     titolo_brano VARCHAR(100) NOT NULL,
     durata_sec INT CHECK (durata_sec >= 30),
     ascolti INT DEFAULT 0,
-    id_album INT,
+    id_album INT NOT NULL,
     CONSTRAINT fk_album FOREIGN KEY (id_album) REFERENCES Album(id_album) ON DELETE CASCADE
 );
 

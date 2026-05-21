@@ -4,9 +4,10 @@ require "../config/db.php";
 $titolo = $_POST["titolo_brano"];
 $artista = $_POST["Ascolti"];
 $durata = $_POST["durata_sec"];
+$album = $_POST["id_album"];
 
-$sql = "INSERT INTO Brani (titolo_brano, Ascolti, durata_sec) 
-        VALUES ('$titolo', '$artista', '$durata')";
+$sql = "INSERT INTO Brani (titolo_brano, Ascolti, durata_sec, id_album) 
+        VALUES ('$titolo', '$artista', '$durata', '$album')";
 
 if ($conn->query($sql) === TRUE) {
     // 2. Se l'inserimento ha successo, mostri l'alert e reindirizzi
