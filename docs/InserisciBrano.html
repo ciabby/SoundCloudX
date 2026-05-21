@@ -8,11 +8,11 @@
 </head>
 <body>
 
-<h2>Inserisci Brano</h2>
+<h2 class="Utente">Inserisci Brano</h2>
 
 <form action="inserisciBrano.php" method="POST">
     
-    <label>Titolo:</label>
+    <label class="subtitle">Titolo:</label>
     <input class="input-box" type="text" name="titolo_brano" placeholder="inserisci il titolo del Brano" required>
 
     <br><br>
@@ -25,14 +25,7 @@
     <label class="subtitle">durata:</label>
     <input class="input-box" type="number" name="durata_sec" placeholder="inserisci la durata in secondi" required>
 
-    <br><br>
-    <select class="box-mini">
-        <option value="Brano">Brano</option>
-        <option value="artista">Artista</option>
-    </select>
-        <?php echo $options; ?>
-    </select>
-
+    <br><br>    
 
     <button type="submit" class="btn">Salva Brano</button>
 

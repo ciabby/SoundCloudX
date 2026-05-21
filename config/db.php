@@ -6,6 +6,7 @@ $username = "root";
 $password = "";
 $database = "SoundCloudX_PRO";
 
+
 $conn = new mysqli($host, $username, $password, $database);
 if ($conn->connect_error) {
     die("Errore connessione: " . $conn->connect_error);

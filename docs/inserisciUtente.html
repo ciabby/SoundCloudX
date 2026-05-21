@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <title class="subtitle">Inserisci Utente</title>
+    <title>Inserisci Utente</title>
     <link rel="stylesheet" href="../assets/style/style.css">
     
 </head>
@@ -15,14 +15,14 @@
 <div id="login-modal" class="login-modal hidden">
     <div class="login-modal-content">
         <button type="button" id="close-login" class="close-modal">&times;</button>
-        <h2>Accesso</h2>
+        <h2 class="Utente">Accesso</h2>
         <form action="loginUtente.php" method="POST" class="login-form">
             
-            <label>Email:</label>
+            <label class="subtitle">Email:</label>
             <input class="input-box" type="email" name="login_email" placeholder="inserisci la tua email" required>
 
             <br><br>
-            <label>Password:</label>
+            <label class="subtitle">Password:</label>
             <input class="input-box" type="password" name="login_password" placeholder="inserisci la tua password" required>
 
             <button type="submit" class="btn login-submit">Login</button>
@@ -34,7 +34,7 @@
 
 <form action="inserisciUtente.php" method="POST">
     
-    <label class="subtitle" >Nome:</label>
+    <label class="subtitle">Nome:</label>
     <input class="input-box" type="text" name="nome" placeholder="inserisci il nome utente" required>
 
     <br><br>
@@ -52,7 +52,7 @@
 
 </form>
 
-<title>Sound-cloudX</title>
+<title class="Utente">Sound-cloudX</title>
 
 <script>
 const openLogin = document.getElementById('open-login');

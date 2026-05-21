@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h2>Inserisci Album</h2>
+<h2 class="Utente">Inserisci Album</h2>
 
 <form action="inserisciAlbum.php" method="POST">
     
@@ -22,11 +22,12 @@
     <input class="input-box" type="number" name="Anno_uscita" placeholder="inserisci l'anno di uscita" required>
 
     <br><br>
-    <select class="box-mini">
-        <option value="Brano">Brano</option>
-        <option value="artista">Artista</option>
-    </select>
 
+    <label class="subtitle" for="artista">Seleziona l'Artista:</label>
+    <select class="input-box" name="id_artista" id="artista" required>
+    <option value="">-- Caricamento artisti... --</option>
+    <script src="../assets/script/script.js"></script>
+    
     <button type="submit" class="btn">Salva Album </button>
 
 </form>
