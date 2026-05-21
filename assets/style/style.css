@@ -4,26 +4,32 @@ body {
     text-align: center;
     margin-top: 50px;
 
-    background-color: #b7e3ff /* azzurro chiaro */
+    background-color: #b7e3ff; /* azzurro chiaro */
 }
 
 .logo{
     position: absolute;
     top: 1%;
-    left: 2%
+    left: 2%;
 }
+
 .subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     font-weight: 400;
     color: #5a189a;
 }
+
 .Utente {
     font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    font-weight: 600;
-    color: whitesmoke;
+    font-size: 48px;                 /* più grande in modo visibile */
+    font-weight: 700;                /* più deciso */
+    color: #ffffff;
+    letter-spacing: 1px;             /* più elegante */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.12); /* ombra leggera ma visibile */
 }
+
+
 
 /* --- BOTTONI CLASSICI --- */
 .btn,
@@ -34,7 +40,7 @@ button {
     min-width: 55px;
 
     background: rgba(255,255,255,0.18);
-    color: #ffffff;
+    color: black;
     text-decoration: none;
     border-radius: 12px;
     font-size: 1rem;
@@ -73,7 +79,7 @@ button:hover {
 
     text-decoration: none;
     font-size: 1.5rem;
-    color: #fff;
+    color: black;
 
     background: rgba(255,255,255,0.18);
     border-radius: 20px;
@@ -100,10 +106,17 @@ button:hover {
     border: 2px solid rgba(255,255,255,0.6);
     border-radius: 12px;
     background: rgba(255,255,255,0.15);
-    color: white;
+
+    color: black; /* testo mentre scrivi */
 
     box-sizing: border-box;
     backdrop-filter: blur(6px);
+}
+
+/* placeholder nero ma più soft */
+.input-box::placeholder {
+    color: black;
+    opacity: 0.55;
 }
 
 /* --- MINI BOX --- */
@@ -126,7 +139,7 @@ button:hover {
 .login-btn {
     padding: 10px 20px;
     background: rgba(255,255,255,0.25);
-    color: white;
+    color: black;
     border: 1px solid rgba(255,255,255,0.4);
     border-radius: 10px;
     cursor: pointer;
@@ -170,8 +183,6 @@ button:hover {
     box-shadow: 0 0 15px rgba(0,0,0,0.15); /* molto soft */
 }
 
-
-
 /* --- X CHIUSURA --- */
 .close-modal {
     position: absolute;
@@ -197,4 +208,33 @@ button:hover {
 
 .login-submit:hover {
     background: #5e60ce;
+}
+
+.card-brano {
+    background: rgba(255,255,255,0.2);
+    border-radius: 12px;
+    padding: 15px;
+    width: 230px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(6px);
+
+    font-family: 'Poppins', sans-serif;
+    color: #5a189a;
+
+    transition: 0.2s ease;
+}
+
+.card-brano:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.02);
+}
+
+/* griglia semplice */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
 }
