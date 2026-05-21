@@ -220,7 +220,7 @@ button:hover {
     backdrop-filter: blur(6px);
 
     font-family: 'Poppins', sans-serif;
-    color: #5a189a;
+    color: #000000;
 
     transition: 0.2s ease;
 }
