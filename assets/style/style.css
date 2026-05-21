@@ -13,7 +13,7 @@ body {
     );
 
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
 
     min-height: 100vh;
     color: white;
@@ -168,18 +168,19 @@ button:hover {
 }
 
 .login-modal-content {
-    background: rgba(255,255,255,0.20); /* leggero, non più bianco */
-    padding: 30px;
-    border-radius: 20px;
+    background: rgba(255,255,255,0.05); /* quasi invisibile */
+    padding: 25px;
+    border-radius: 15px;
     width: 350px;
     position: relative;
     text-align: center;
 
-    backdrop-filter: blur(12px); /* effetto vetro */
-    border: 1px solid rgba(255,255,255,0.35);
+    backdrop-filter: blur(10px); /* effetto vetro leggero */
+    border: 1px solid rgba(255,255,255,0.25);
 
-    box-shadow: 0 0 25px rgba(0,0,0,0.25); /* più soft */
+    box-shadow: 0 0 15px rgba(0,0,0,0.15); /* molto soft */
 }
+
 
 
 /* --- X CHIUSURA --- */
