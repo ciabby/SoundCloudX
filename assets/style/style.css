@@ -9,21 +9,20 @@ body {
 
 .logo{
     position: absolute;
-    top: 25px;
-    left: 25px;
+    top: 1%;
+    left: 2%
 }
 .subtitle {
     font-family: 'Poppins', sans-serif;
-    font-size: 52px;
-    font-weight: 700;
-    color: #9d4edd;
-    text-align: left;
-
-    position: absolute;
-    top: 25px;
-    left: 25px;
-
-    text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    font-size: 20px;
+    font-weight: 400;
+    color: #5a189a;
+}
+.Utente {
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: whitesmoke;
 }
 
 /* --- BOTTONI CLASSICI --- */
