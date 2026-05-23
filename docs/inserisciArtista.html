@@ -1,38 +1,48 @@
+<!-- DICHIARAZIONE DOCUMENTO E SEZIONE HEAD -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Inserisci Artista</title>
-    <link rel="stylesheet" href="../assets/style/style.css">
-    
+    <meta charset="UTF-8"> <!-- Codifica caratteri -->
+    <title>Inserisci Artista</title> <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="../assets/style/style.css"> <!-- Collegamento al CSS -->
 </head>
+
 <body>
+
+    <!-- FRECCIA PER TORNARE AL MENU -->
     <a href="Menu.html" class="back-arrow-small">←</a>
-    <!-- Bottone Logout -->
+
+    <!-- BOTTONE LOGOUT -->
     <a href="../index.html" class="logout-btn">logout</a>
-<h2 class="Utente">Inserisci Artista</h2>
 
-<form action="InserisciArtista.php" method="POST">
-    
-    <label class="subtitle">Nome:</label>
-    <input class="input-box" type="text" name="nome" placeholder="inserisci il nome dell'Artista" required>
+    <!-- TITOLO PAGINA -->
+    <h2 class="Utente">Inserisci Artista</h2>
 
-    <br><br>
-     
-    <label class="subtitle">Stato:</label>
-    <select class="input-box" name="stato">
-        <option value="Attivo">Attivo</option>
-        <option value="Inattivo">Inattivo</option>
-        <option value="In Pausa">In Pausa</option>
-    </select>
+    <!-- FORM DI INSERIMENTO ARTISTA -->
+    <form action="InserisciArtista.php" method="POST">
 
-    <br><br>
+        <!-- Campo nome artista -->
+        <label class="subtitle">Nome:</label>
+        <input class="input-box" type="text" name="nome" placeholder="inserisci il nome dell'Artista" required>
 
-    <button type="submit" class="btn">Salva Artista </button>
+        <br><br>
 
-</form>
+        <!-- Select stato artista -->
+        <label class="subtitle">Stato:</label>
+        <select class="input-box" name="stato">
+            <option value="Attivo">Attivo</option>
+            <option value="Inattivo">Inattivo</option>
+            <option value="In Pausa">In Pausa</option>
+        </select>
 
-</div>
+        <br><br>
+
+        <!-- Bottone invio -->
+        <button type="submit" class="btn">Salva Artista </button>
+
+    </form>
+
+    <!-- Script logout -->
     <script src="../assets/script/logout.js"></script>
 
 </body>

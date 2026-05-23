@@ -1,22 +1,38 @@
+<!-- DICHIARAZIONE DOCUMENTO E SEZIONE HEAD -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Menù</title>
-    <link rel="stylesheet" href="../assets/style/style.css">
+    <meta charset="UTF-8"> <!-- Codifica caratteri -->
+    <title>Menù</title> <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="../assets/style/style.css"> <!-- Collegamento al CSS -->
 </head>
+
 <body>
-    <!-- Bottone Logout -->
+
+    <!-- BOTTONE LOGOUT (torna alla pagina index) -->
     <a href="../index.html" class="logout-btn">logout</a>
-    
-    <h2 class="Utente" >Menù</h2>
+
+    <!-- TITOLO DELLA PAGINA -->
+    <h2 class="Utente">Menù</h2>
+
+    <!-- GRIGLIA DEI BOTTONI DEL MENU -->
     <div class="grid-buttons">
-        <a class="btn-square" href="InserisciAlbum.html"> Inserisci Album</a>
+
+        <!-- Link per inserire un album -->
+        <a class="btn-square" href="InserisciAlbum.html">Inserisci Album</a>
+
+        <!-- Link per inserire un artista -->
         <a class="btn-square" href="inserisciArtista.html">Inserisci Artista</a>
+
+        <!-- Link per inserire un brano -->
         <a class="btn-square" href="InserisciBrano.html">Inserisci Brano</a>
-        <a class="btn-square" href="AccessoBrani.html"> Libreria</a>
+
+        <!-- Link alla libreria dei brani -->
+        <a class="btn-square" href="AccessoBrani.html">Libreria</a>
     </div>
-    
+
+    <!-- SCRIPT LOGOUT (gestisce eventuale logica JS) -->
     <script src="../assets/script/logout.js"></script>
+
 </body>
 </html>

@@ -1,60 +1,76 @@
+<!-- DICHIARAZIONE DOCUMENTO E SEZIONE HEAD -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <title>Inserisci Utente</title>
-    <link rel="stylesheet" href="../assets/style/style.css">
-    
+    <meta charset="UTF-8"> <!-- Codifica caratteri -->
+    <title>Inserisci Utente</title> <!-- Titolo della pagina -->
+    <link rel="stylesheet" href="../assets/style/style.css"> <!-- Collegamento al CSS -->
 </head>
+
 <body>
 
+<!-- BOTTONE LOGIN IN ALTO A DESTRA -->
 <div class="login-top-right">
     <button id="open-login" class="login-btn">Login</button>
 </div>
 
+<!-- MODALE LOGIN (inizialmente nascosta con classe "hidden") -->
 <div id="login-modal" class="login-modal hidden">
     <div class="login-modal-content">
+
+        <!-- Bottone per chiudere la modale -->
         <button type="button" id="close-login" class="close-modal">&times;</button>
+
+        <!-- Titolo modale -->
         <h2 class="Utente">Accesso</h2>
+
+        <!-- FORM LOGIN -->
         <form action="loginUtente.php" method="POST" class="login-form">
-            
+
+            <!-- Campo email -->
             <label class="subtitle">Email:</label>
             <input class="input-box" type="email" name="login_email" placeholder="inserisci la tua email" required>
 
             <br><br>
+
+            <!-- Campo password -->
             <label class="subtitle">Password:</label>
             <input class="input-box" type="password" name="login_password" placeholder="inserisci la tua password" required>
 
+            <!-- Bottone invio login -->
             <button type="submit" class="btn login-submit">Login</button>
         </form>
     </div>
 </div>
 
-
+<!-- TITOLO PAGINA REGISTRAZIONE -->
 <h2 class="Utente">Inserisci utente</h2>
 
+<!-- FORM REGISTRAZIONE UTENTE -->
 <form action="inserisciUtente.php" method="POST">
-    
+
+    <!-- Campo nome -->
     <label class="subtitle">Nome:</label>
     <input class="input-box" type="text" name="nome" placeholder="inserisci il nome utente" required>
 
     <br><br>
 
+    <!-- Campo email -->
     <label class="subtitle">Email:</label>
     <input class="input-box" type="email" name="email" placeholder="inserisci l'email" required>
 
-
     <br><br>
+
+    <!-- Campo password -->
     <label class="subtitle">Password:</label>
     <input class="input-box" type="password" name="password" placeholder="inserisci la password" required>
 
+    <!-- Bottone invio -->
     <button type="submit" class="btn">Registrati</button>
-
 
 </form>
 
-<title class="Utente">Sound-cloudX</title>
-
+<!-- SCRIPT CHE GESTISCE L’APERTURA E CHIUSURA DELLA MODALE LOGIN -->
 <script>
 const openLogin = document.getElementById('open-login');
 const closeLogin = document.getElementById('close-login');

@@ -1,42 +1,53 @@
+<!-- DICHIARAZIONE DOCUMENTO E HEAD -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <title>Inserisci Album</title>
+    <!-- Collegamento al foglio di stile -->
     <link rel="stylesheet" href="../assets/style/style.css">
-   
-
 </head>
+
 <body>
 
-    <!-- Bottone Logout -->
-    <button id="logout-btn" class="logout-btn">Logout</button>
-<a href="Menu.html" class="back-arrow-small">←</a>
-<h2 class="Utente">Inserisci Album</h2>
+    <!-- SEZIONE NAVIGAZIONE: logout + freccia indietro -->
+    <a href="../index.html" class="logout-btn">logout</a>
+    <a href="Menu.html" class="back-arrow-small">←</a>
 
-<form action="InserisciAlbum.php" method="POST">
-    
-    <label class="subtitle">Titolo:</label>
-    <input class="input-box" type="text" name="titolo" placeholder="inserisci il titolo dell'Album" required>
+    <!-- TITOLO PAGINA -->
+    <h2 class="Utente">Inserisci Album</h2>
 
-    <br><br>
-     
-    <label class="subtitle">AnnoUscita:</label>
-    <input class="input-box" type="number" name="Anno_uscita" placeholder="inserisci l'anno di uscita" required>
+    <!-- FORM DI INSERIMENTO ALBUM -->
+    <form action="InserisciAlbum.php" method="POST">
 
-    <br><br>
+        <!-- Campo titolo album -->
+        <label class="subtitle">Titolo:</label>
+        <input class="input-box" type="text" name="titolo" placeholder="inserisci il titolo dell'Album" required>
 
-    <label class="subtitle" for="artista">Seleziona l'Artista:</label>
-    <select class="input-box" name="id_artista" id="artista" required>
-    <option value="">-- Caricamento artisti... --</option>
-    </select>
-    <button type="submit" class="btn">Salva Album </button>
-    <script src="../assets/script/scriptart.js"></script>
-    <script src="../assets/script/logout.js"></script>
-    
+        <br><br>
 
-</form>
+        <!-- Campo anno di uscita -->
+        <label class="subtitle">AnnoUscita:</label>
+        <input class="input-box" type="number" name="Anno_uscita" placeholder="inserisci l'anno di uscita" required>
 
+        <br><br>
+
+        <!-- Select per scegliere l'artista (caricata via JS) -->
+        <label class="subtitle" for="artista">Seleziona l'Artista:</label>
+        <select class="input-box" name="id_artista" id="artista" required>
+            <option value="">-- Caricamento artisti... --</option>
+        </select>
+
+        <!-- Bottone invio -->
+        <button type="submit" class="btn">Salva Album</button>
+
+        <!-- Script che carica gli artisti -->
+        <script src="../assets/script/scriptart.js"></script>
+
+        <!-- Script logout -->
+        <script src="../assets/script/logout.js"></script>
+
+    </form>
 
 </body>
 </html>

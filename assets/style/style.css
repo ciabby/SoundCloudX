@@ -1,19 +1,21 @@
-/* --- BASE --- */
+/* --- BASE DELLA PAGINA: font, colori, sfondo, centratura --- */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin-top: 50px;
 
     background: #0d0d0d; /* nero morbido */
-    color: #eaeaea;
+    color: #eaeaea;      /* testo grigio chiaro */
 }
 
+/* Logo in alto a sinistra */
 .logo{
     position: absolute;
     top: 1%;
     left: 2%;
 }
 
+/* Sottotitoli viola */
 .subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -21,6 +23,7 @@ body {
     color: #c77dff;
 }
 
+/* Titoli principali (Utente, Inserisci Album, ecc.) */
 .Utente {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
@@ -30,7 +33,7 @@ body {
     text-shadow: 0 2px 6px rgba(199,125,255,0.35);
 }
 
-/* --- BOTTONI CLASSICI --- */
+/* --- BOTTONI CLASSICI (tutti i .btn e <button>) --- */
 .btn,
 button {
     display: inline-block;
@@ -53,12 +56,12 @@ button {
     overflow: hidden;
 }
 
-/* LINEA LUMINOSA SOTTO */
+/* Linea luminosa sotto i bottoni */
 .btn::after,
 button::after {
     content: "";
     position: absolute;
-    bottom: 0; /* sotto */
+    bottom: 0;
     left: 0;
     width: 0%;
     height: 3px;
@@ -66,18 +69,20 @@ button::after {
     transition: width 0.3s ease;
 }
 
+/* Effetto hover: linea si estende */
 .btn:hover::after,
 button:hover::after {
     width: 100%;
 }
 
+/* Hover generale dei bottoni */
 .btn:hover,
 button:hover {
     background: rgba(157,78,221,0.25);
     transform: translateY(-3px) scale(1.03);
 }
 
-/* --- GRID 2×2 --- */
+/* --- GRIGLIA 2×2 DEL MENU --- */
 .grid-buttons {
     width: 80%;
     max-width: 700px;
@@ -88,7 +93,7 @@ button:hover {
     gap: 28px;
 }
 
-/* --- RETTANGOLI GLASS (MENU) --- */
+/* --- RETTANGOLI GLASS DEL MENU --- */
 .btn-square {
     width: 260px;
     height: 140px;
@@ -113,11 +118,11 @@ button:hover {
     overflow: hidden;
 }
 
-/* LINEA LUMINOSA SOTTO */
+/* Linea luminosa sotto i rettangoli */
 .btn-square::after {
     content: "";
     position: absolute;
-    bottom: 0; /* sotto */
+    bottom: 0;
     left: 0;
     width: 0%;
     height: 4px;
@@ -129,12 +134,13 @@ button:hover {
     width: 100%;
 }
 
+/* Hover dei rettangoli */
 .btn-square:hover {
     background: rgba(255,255,255,0.15);
     transform: translateY(-4px) scale(1.03);
 }
 
-/* --- TASTO LIBRERIA VIOLA --- */
+/* --- TASTO LIBRERIA VIOLA (solo quello) --- */
 .btn-square[href*="AccessoBrani"] {
     background: rgba(157,78,221,0.25);
     border: 1px solid rgba(157,78,221,0.5);
@@ -144,7 +150,7 @@ button:hover {
     background: rgba(157,78,221,0.45);
 }
 
-/* --- INPUT --- */
+/* --- INPUT FORM --- */
 .input-box {
     display: block;
     width: 100%;
@@ -166,7 +172,7 @@ button:hover {
     opacity: 0.55;
 }
 
-/* --- MINI BOX --- */
+/* Mini box (non usato spesso) */
 .box-mini {
     position: relative;
     width: 10%;
@@ -175,7 +181,7 @@ button:hover {
     border-radius: 10px;
 }
 
-/* --- LOGIN BUTTON TOP RIGHT --- */
+/* --- LOGIN BUTTON IN ALTO A DESTRA --- */
 .login-top-right {
     position: fixed;
     top: 20px;
@@ -198,186 +204,11 @@ button:hover {
     background: rgba(255,255,255,0.25);
 }
 
-/* --- MODALE --- */
+/* --- MODALE LOGIN --- */
 .login-modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
 
-.hidden {
-    display: none;
-}
-
-.login-modal-content {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 15px;
-    width: 350px;
-    position: relative;
-    text-align: center;
-
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.25);
-
-    box-shadow: 0 0 15px rgba(0,0,0,0.35);
-}
-
-/* --- X CHIUSURA --- */
-.close-modal {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    color: #eaeaea;
-}
-
-/* --- SUBMIT LOGIN --- */
-.login-submit {
-    background: #9d4edd;
-    color: white;
-    border: none;
-    padding: 12px;
-    width: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-.login-submit:hover {
-    background: #c77dff;
-}
-
-/* --- CARD BRANO (NUOVA VERSIONE) --- */
-.card-brano {
-    background: rgba(255,255,255,0.08);
-    border-radius: 16px;
-    padding: 18px;
-    width: 240px;
-
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(8px);
-
-    font-family: 'Poppins', sans-serif;
-    color: #eaeaea;
-
-    transition: 0.25s ease;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-/* immagine brano */
-.card-brano img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-/* titolo brano */
-.card-brano h3 {
-    font-size: 1.2rem;
-    margin: 0;
-    color: #c77dff;
-}
-
-/* artista */
-.card-brano p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
-
-/* hover */
-.card-brano:hover {
-    background: rgba(255,255,255,0.15);
-    transform: translateY(-4px) scale(1.03);
-}
-
-/* --- GRIGLIA CARDS --- */
-.cards-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-/* --- LOGOUT BUTTON TOP RIGHT --- */
-.logout-btn {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background: rgba(157,78,221,0.25);
-    color: #eaeaea;
-    border: 1px solid rgba(157,78,221,0.6);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.25s ease;
-    backdrop-filter: blur(6px);
-    font-size: 1rem;
-    z-index: 999;
-}
-
-.logout-btn:hover {
-    background: rgba(157,78,221,0.45);
-    transform: scale(1.05);
-}
-
-/* --- FRECCIA PICCOLA ACCANTO ALLA SCRITTA --- */
-.back-arrow-small {
-    font-size: 20px;          /* più piccola */
-    font-weight: 600;
-    color: #c77dff;           /* viola come il titolo */
-    text-decoration: none;
-
-    margin-left: 10px;       /* spazio dalla scritta */
-
-    padding: 6px 10px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 10px;
-    border: 1px solid rgba(255,255,255,0.15);
-    backdrop-filter: blur(6px);
-
-    transition: 0.25s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* linea luminosa sotto */
-.back-arrow-small::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: linear-gradient(90deg, #9d4edd, #c77dff);
-    transition: width 0.3s ease;
-}
-
-.back-arrow-small:hover::after {
-    width: 100%;
-}
-
-.back-arrow-small:hover {
-    background: rgba(157,78,221,0.25);
-    transform: translateY(-2px) scale(1.05);
-}
-
-
+    }
