@@ -210,5 +210,179 @@ button:hover {
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
 
-    }
+.hidden {
+    display: none;
+}
+
+/* Contenuto della modale */
+.login-modal-content {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    position: relative;
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.25);
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.35);
+}
+
+/* X per chiudere la modale */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    color: #eaeaea;
+}
+
+/* Bottone login dentro la modale */
+.login-submit {
+    background: #9d4edd;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.login-submit:hover {
+    background: #c77dff;
+}
+
+/* --- CARD BRANO (Libreria) --- */
+.card-brano {
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 18px;
+    width: 240px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+
+    font-family: 'Poppins', sans-serif;
+    color: #eaeaea;
+
+    transition: 0.25s ease;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Immagine brano */
+.card-brano img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Titolo brano */
+.card-brano h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #c77dff;
+}
+
+/* Artista */
+.card-brano p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Hover card */
+.card-brano:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-4px) scale(1.03);
+}
+
+/* Griglia delle card */
+.cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* --- BOTTONE LOGOUT IN ALTO A DESTRA --- */
+.logout-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: rgba(157,78,221,0.25);
+    color: #eaeaea;
+    border: 1px solid rgba(157,78,221,0.6);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+    backdrop-filter: blur(6px);
+    font-size: 1rem;
+    z-index: 999;
+}
+
+.logout-btn:hover {
+    background: rgba(157,78,221,0.45);
+    transform: scale(1.05);
+}
+
+/* --- FRECCIA PICCOLA (torna indietro) --- */
+.back-arrow-small {
+    font-size: 20px;
+    font-weight: 600;
+    color: #c77dff;
+
+    text-decoration: none;
+    margin-left: 10px;
+
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Linea luminosa sotto la freccia */
+.back-arrow-small::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #9d4edd, #c77dff);
+    transition: width 0.3s ease;
+}
+
+.back-arrow-small:hover::after {
+    width: 100%;
+}
+
+.back-arrow-small:hover {
+    background: rgba(157,78,221,0.25);
+    transform: translateY(-2px) scale(1.05);
+}
