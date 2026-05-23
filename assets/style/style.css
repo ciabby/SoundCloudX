@@ -338,3 +338,46 @@ button:hover {
     background: rgba(157,78,221,0.45);
     transform: scale(1.05);
 }
+
+/* --- FRECCIA PICCOLA ACCANTO ALLA SCRITTA --- */
+.back-arrow-small {
+    font-size: 20px;          /* più piccola */
+    font-weight: 600;
+    color: #c77dff;           /* viola come il titolo */
+    text-decoration: none;
+
+    margin-left: 10px;       /* spazio dalla scritta */
+
+    padding: 6px 10px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    backdrop-filter: blur(6px);
+
+    transition: 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* linea luminosa sotto */
+.back-arrow-small::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #9d4edd, #c77dff);
+    transition: width 0.3s ease;
+}
+
+.back-arrow-small:hover::after {
+    width: 100%;
+}
+
+.back-arrow-small:hover {
+    background: rgba(157,78,221,0.25);
+    transform: translateY(-2px) scale(1.05);
+}
+
+
