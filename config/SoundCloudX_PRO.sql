@@ -31,17 +31,3 @@ CREATE TABLE Brani (
     CONSTRAINT fk_album FOREIGN KEY (id_album) REFERENCES Album(id_album) ON DELETE CASCADE
 );
 
-CREATE TABLE Playlist (
-    id_playlist INT PRIMARY KEY AUTO_INCREMENT,
-    nome_playlist VARCHAR(100) NOT NULL,
-    visibilita ENUM('Pubblica', 'Privata') DEFAULT 'Privata'
-);
-
-CREATE TABLE Contenuto_Playlist (
-    id_playlist INT,
-    id_brano INT,
-    posizione INT DEFAULT 1,
-    PRIMARY KEY (id_playlist, id_brano), -- CHIAVE COMPOSTA
-    CONSTRAINT fk_play FOREIGN KEY (id_playlist) REFERENCES Playlist(id_playlist) ON DELETE CASCADE,
-    CONSTRAINT fk_brano FOREIGN KEY (id_brano) REFERENCES Brani(id_brano) ON DELETE CASCADE
-);
