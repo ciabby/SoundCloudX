@@ -386,3 +386,31 @@ button:hover {
     background: rgba(157,78,221,0.25);
     transform: translateY(-2px) scale(1.05);
 }
+
+/* --- Minimal responsive fixes (non invasive) --- */
+@media (max-width: 600px) {
+    *{box-sizing: border-box}
+    img, picture, video, iframe { max-width: 100%; height: auto; }
+
+    /* make menu buttons stack instead of overlap */
+    .grid-buttons { width: 94%; margin: 30px auto; gap: 16px; }
+    .btn-square { width: 100%; max-width: 100%; height: auto; padding: 12px; margin: 8px 0; font-size: 1.2rem; }
+
+    /* cards flow vertically on small screens */
+    .cards-grid { flex-direction: column; align-items: center; gap: 14px; margin-top: 20px; }
+
+    /* inputs and forms full-width but keep existing look */
+    .input-box { width: 100%; max-width: 100%; margin: 8px 0; padding: 10px 12px; }
+
+    /* adjust header/title sizing */
+    .Utente { font-size: 32px; }
+
+    /* move top controls slightly inward */
+    .login-top-right, .logout-btn { top: 12px; right: 12px; }
+
+    /* logo: keep visible but non-overlapping */
+    .logo { position: static; display: block; margin: 8px auto; width: 120px; }
+
+    /* modal sizing */
+    .login-modal-content { width: 90%; max-width: 360px; }
+}
