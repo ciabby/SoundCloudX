@@ -34,121 +34,123 @@ body {
 }
 
 /* --- BOTTONI CLASSICI (tutti i .btn e <button>) --- */
+/* Stile base per i bottoni */
 .btn,
-button {
-    display: inline-block;
-    padding: 14px 24px;
-    margin: 14px 10px;
-    min-width: 55px;
+button { /* Applica lo stile sia a .btn che ai tag <button> */
 
-    background: rgba(255,255,255,0.08);
-    color: #eaeaea;
-    text-decoration: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    border: 1px solid rgba(255,255,255,0.15);
+    display: inline-block; /* Si comporta come inline ma può avere width/height */
+    padding: 14px 24px; /* Spazio interno: 14px sopra/sotto, 24px ai lati */
+    margin: 14px 10px; /* Spazio esterno: 14px sopra/sotto, 10px ai lati */
+    min-width: 55px; /* Larghezza minima del bottone */
 
-    cursor: pointer;
-    transition: 0.25s ease;
-    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.08); /* Sfondo glass molto leggero */
+    color: #eaeaea; /* Testo quasi bianco */
+    border-radius: 12px; /* Angoli arrotondati */
+    font-size: 1rem; /* Dimensione testo standard */
+    border: 1px solid rgba(255,255,255,0.15); /* Bordo glass trasparente */
 
-    position: relative;
-    overflow: hidden;
+    cursor: pointer; /* Cursore a manina */
+    transition: 0.25s ease; /* Animazioni fluide */
+    backdrop-filter: blur(6px); /* Effetto vetro sfocato */
+
+    position: relative; /* Serve per posizionare il ::after */
+    overflow: hidden; /* Taglia ciò che esce (la linea luminosa) */
 }
 
 /* Linea luminosa sotto i bottoni */
 .btn::after,
 button::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background: linear-gradient(90deg, #9d4edd, #c77dff);
-    transition: width 0.3s ease;
+    content: ""; /* Necessario per creare l'elemento */
+    position: absolute; /* Posizionamento libero dentro il bottone */
+    bottom: 0; /* Attaccato in basso */
+    left: 0; /* Attaccato a sinistra */
+    width: 0%; /* Parte invisibile */
+    height: 3px; /* Spessore della linea */
+    background: linear-gradient(90deg, #9d4edd, #c77dff); /* Sfumatura viola-lilla */
+    transition: width 0.3s ease; /* Animazione dell'allargamento */
 }
 
-/* Effetto hover: linea si estende */
+/* Hover: la linea si estende */
 .btn:hover::after,
 button:hover::after {
-    width: 100%;
+    width: 100%; /* La linea si allarga su tutta la base */
 }
 
 /* Hover generale dei bottoni */
 .btn:hover,
 button:hover {
-    background: rgba(157,78,221,0.25);
-    transform: translateY(-3px) scale(1.03);
+    background: rgba(157,78,221,0.25); /* Sfondo viola più visibile */
+    transform: translateY(-3px) scale(1.03); /* Si solleva e cresce leggermente */
 }
 
 /* --- GRIGLIA 2×2 DEL MENU --- */
 .grid-buttons {
-    width: 80%;
-    max-width: 700px;
-    margin: 60px auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
+    width: 80%; /* Occupa l'80% della pagina */
+    max-width: 700px; /* Non supera i 700px */
+    margin: 60px auto; /* Centrata con spazio sopra/sotto */
+    display: flex; /* Layout flessibile */
+    flex-wrap: wrap; /* Va a capo creando la griglia */
+    justify-content: center; /* Centra gli elementi */
+    gap: 28px; /* Spazio tra i rettangoli */
 }
 
 /* --- RETTANGOLI GLASS DEL MENU --- */
 .btn-square {
-    width: 260px;
-    height: 140px;
+    width: 260px; /* Larghezza fissa */
+    height: 140px; /* Altezza fissa */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Per centrare il contenuto */
+    align-items: center; /* Centro verticale */
+    justify-content: center; /* Centro orizzontale */
 
-    text-decoration: none;
-    font-size: 1.5rem;
-    color: #eaeaea;
+    text-decoration: none; /* Niente sottolineatura */
+    font-size: 1.5rem; /* Testo grande */
+    color: #eaeaea; /* Testo chiaro */
 
-    background: rgba(255,255,255,0.08);
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.08); /* Effetto glass */
+    border-radius: 20px; /* Angoli molto arrotondati */
+    border: 1px solid rgba(255,255,255,0.15); /* Bordo glass */
 
-    backdrop-filter: blur(8px);
-    transition: 0.25s ease;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    backdrop-filter: blur(8px); /* Sfocatura più forte */
+    transition: 0.25s ease; /* Animazioni fluide */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35); /* Ombra sotto */
 
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Necessario per il ::after */
+    overflow: hidden; /* Taglia la linea luminosa */
 }
 
 /* Linea luminosa sotto i rettangoli */
 .btn-square::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0%;
-    height: 4px;
-    background: linear-gradient(90deg, #9d4edd, #c77dff);
-    transition: width 0.3s ease;
+    content: ""; /* Crea l'elemento */
+    position: absolute; /* Posizionamento libero */
+    bottom: 0; /* In basso */
+    left: 0; /* A sinistra */
+    width: 0%; /* Parte invisibile */
+    height: 4px; /* Linea più spessa dei bottoni */
+    background: linear-gradient(90deg, #9d4edd, #c77dff); /* Sfumatura viola */
+    transition: width 0.3s ease; /* Animazione */
 }
 
 .btn-square:hover::after {
-    width: 100%;
+    width: 100%; /* La linea si estende */
 }
 
 /* Hover dei rettangoli */
 .btn-square:hover {
-    background: rgba(255,255,255,0.15);
-    transform: translateY(-4px) scale(1.03);
+    background: rgba(255,255,255,0.15); /* Glass più chiaro */
+    transform: translateY(-4px) scale(1.03); /* Si solleva di più */
 }
 
 /* --- TASTO LIBRERIA VIOLA (solo quello) --- */
 .btn-square[href*="AccessoBrani"] {
-    background: rgba(157,78,221,0.25);
-    border: 1px solid rgba(157,78,221,0.5);
+    background: rgba(157,78,221,0.25); /* Viola personalizzato */
+    border: 1px solid rgba(157,78,221,0.5); /* Bordo viola */
 }
 
 .btn-square[href*="AccessoBrani"]:hover {
-    background: rgba(157,78,221,0.45);
+    background: rgba(157,78,221,0.45); /* Viola più intenso in hover */
 }
+
 
 /* --- INPUT FORM --- */
 .input-box {
@@ -172,7 +174,7 @@ button:hover {
     opacity: 0.55;
 }
 
-/* Mini box (non usato spesso) */
+/* Mini box */
 .box-mini {
     position: relative;
     width: 10%;
@@ -287,13 +289,6 @@ button:hover {
     gap: 10px;
 }
 
-/* Immagine brano */
-.card-brano img {
-    width: 100%;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-}
 
 /* Titolo brano */
 .card-brano h3 {
@@ -387,30 +382,31 @@ button:hover {
     transform: translateY(-2px) scale(1.05);
 }
 
-/* --- Minimal responsive fixes (non invasive) --- */
+/* --- Correzioni responsive minime (non invasive) --- */
 @media (max-width: 600px) {
     *{box-sizing: border-box}
     img, picture, video, iframe { max-width: 100%; height: auto; }
 
-    /* make menu buttons stack instead of overlap */
+    /* fai impilare i pulsanti del menu invece che sovrapporli */
     .grid-buttons { width: 94%; margin: 30px auto; gap: 16px; }
     .btn-square { width: 100%; max-width: 100%; height: auto; padding: 12px; margin: 8px 0; font-size: 1.2rem; }
 
-    /* cards flow vertically on small screens */
+    /* le card scorrono verticalmente sugli schermi piccoli */
     .cards-grid { flex-direction: column; align-items: center; gap: 14px; margin-top: 20px; }
 
-    /* inputs and forms full-width but keep existing look */
+    /* input e form a larghezza piena ma mantenendo lo stile attuale */
     .input-box { width: 100%; max-width: 100%; margin: 8px 0; padding: 10px 12px; }
 
-    /* adjust header/title sizing */
+    /* riduci la dimensione dei titoli */
     .Utente { font-size: 32px; }
 
-    /* move top controls slightly inward */
+    /* sposta leggermente verso l’interno i controlli in alto */
     .login-top-right, .logout-btn { top: 12px; right: 12px; }
 
-    /* logo: keep visible but non-overlapping */
+    /* logo: mantienilo visibile ma senza sovrapposizioni */
     .logo { position: static; display: block; margin: 8px auto; width: 120px; }
 
-    /* modal sizing */
+    /* dimensioni della modale */
     .login-modal-content { width: 90%; max-width: 360px; }
 }
+
