@@ -3,7 +3,8 @@ require "../config/db.php";
 
 $mail = $_POST["login_email"];
 $password = $_POST["login_password"];
-
+// HASH PASSWORD (più sicura)
+$password = password_hash($password, PASSWORD_BCRYPT);
 $sql = "SELECT 1 FROM Utenti WHERE mail='$mail' AND passwords='$password'";
 // Eseguiamo la query e salviamo l'oggetto risultato in $result
 $result = $conn->query($sql);
